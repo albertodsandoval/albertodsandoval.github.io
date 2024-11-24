@@ -1,5 +1,5 @@
 ---
-title: "APIs: A definitive guide"
+title: "What is an API? How can I use one?"
 date: 2024-11-23
 categories:
   - Blog
@@ -10,7 +10,7 @@ tags:
 ---
 
 > In this blog post, I will quickly explain some
-> of the concepts we went over in **CSUN's** _Girl's Who Code_
+> of the concepts discussed at **CSUN's** _Girl's Who Code_
 > hosted API workshop featuring **Luis J Guzman**,
 > a web developer at **CSUN**.
 
