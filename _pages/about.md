@@ -15,4 +15,4 @@ Computer Science. As Einstein said,
 You can access the link to my blog [here](https://albertodsandoval.github.io/albertodsandoval/)
 
 Thank you for stopping by! If you have any questions
-or concerns, feel free to email me at alberto.domingo.sandoval@gmail.com
+or concerns, feel free to email me at alberto.sandoval.domingo@gmail.com
