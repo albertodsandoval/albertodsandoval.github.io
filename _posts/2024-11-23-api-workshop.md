@@ -1,10 +1,12 @@
 ---
-title: "How to get started on APIs"
-layout: post
+title: "APIs: A definitive guide"
 date: 2024-11-23
-author: Alberto Sandoval
-categories: [API, tutorial, history]
-tags: [beginner, blog]
+categories:
+  - Blog
+tags: 
+  - Lesson
+  - APIs
+  - Workshop
 ---
 
 In this blog post, I will quickly explain some
