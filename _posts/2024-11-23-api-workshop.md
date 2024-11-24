@@ -9,7 +9,7 @@ tags:
   - Workshop
 ---
 
-In this blog post, I will quickly explain some
+> In this blog post, I will quickly explain some
 of the concepts we went over in **CSUN's** _Girl's Who Code_
 hosted API workshop featuring **Luis J Guzman**,
 a web developer at **CSUN**.
