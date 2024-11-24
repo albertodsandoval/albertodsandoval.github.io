@@ -42,12 +42,12 @@ to access files.
 ## So... what is an API?
 
 The acronym API stands for Application Programming Interface.
-What it does is it allows programs that don't have data or **_files_**
+What it does is allow programs that don't have data or **_files_**
 built in to them to access files stored somewhere else on the internet,
-usually in a database. For example, a user accessing website like YouTube
+usually in a database. For example, a user accessing a website like YouTube
 doesn't need to have every single video ever uploaded to YouTube
 installed on their phone or computer. The YouTube application uses
-and API to fetch the information on a video, which exists elsewhere. 
+an API to fetch the information on a video, which exists elsewhere. 
 If this location, the one that actually contains the video, is accessible
 to the public, than anyone can make a website similar to YouTube that 
 streams the same videos that YouTube does.  
@@ -71,10 +71,10 @@ have the files or data, and the one the does.
 
 Guzman did show us a few examples of what an API could look like 
 in an application: a random cat image generator, a random inspiring
-quote, as well as a whether API displayed the weather for our location.
-This, of course, is just a few examples of what situation APIs are used in.
-Generally, APIs are used in most every website or application. Almost every
-situation where you press a button or trigger an event and something loads 
+quote generator, as well as a weather API that displays the weather for our location.
+This, of course, is just a few examples that show situations APIs can be used in.
+Generally, APIs are used in almost every website or application. Nearly every
+instance where you press a button or trigger an event and something loads 
 up without transferring you to another URL is likely the work of an API.  
 
 In all of these situations, the website (or application) running the 
