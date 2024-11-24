@@ -1,27 +1,13 @@
-# Minimal Mistakes remote theme starter
+This repository serves as my blog for my Computer Science
+(and maybe unrelated!) endeavours. The goal of this blog
+is to deepen my understanding of concepts learned as
+I progress through my studies as an Undergraduate in
+Computer Science. As Einstein said,
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+> "_If you can't explain it **simply**, you don't
+> understand it well enough._"
 
-Contains basic configuration to get you a site with:
+You can access the link to my blog [here](https://albertodsandoval.github.io/albertodsandoval/)
 
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
-
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
-
----
-
-## Troubleshooting
-
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
-
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+Thank you for stopping by! If you have any questions
+or concerns, feel free to email me at alberto.domingo.sandoval@gmail.com
