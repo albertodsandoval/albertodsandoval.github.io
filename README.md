@@ -1,3 +1,5 @@
+# Welcome to my page!
+
 This repository serves as my blog for my Computer Science
 (and maybe unrelated!) endeavours. The goal of this blog
 is to deepen my understanding of concepts learned as
