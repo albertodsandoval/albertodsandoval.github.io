@@ -139,8 +139,8 @@ Click for cat!
   }
 </script>
 
-Essentially, what is happening here is the link https://api.thecatapi.com/v1/images/search
-an API endpoint, and it returns an Object that contains an image of a cat. On The Cat APIs
+Essentially, what is happening here is the link <https://api.thecatapi.com/v1/images/search>
+an API endpoint, and it returns an Object that contains an image of a cat. On _The Cat APIs_
 website, they provide an example of one of these Objects, so from here it is easy to 
 extract the url. This is what the Object looks like:
 ```json
@@ -152,8 +152,8 @@ extract the url. This is what the Object looks like:
     "favourite":{}
 }]
 ```
-We know that there is a field in this Object called "url" that contains the url of a cat image!
-What the code does is:
+We know that there is a field in this Object called "url" that contains the url of a cat image.
+So we can create some code that does:
 1. Creates a button element to click
     * this button will call _fetchCat_ when pressed
 2. Creates a div element to hold the image when we get it
