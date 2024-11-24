@@ -9,7 +9,7 @@ Computer Science. As Einstein said,
 > "_If you can't explain it **simply**, you don't
 > understand it well enough._"
 
-You can access the link to my blog [here](https://albertodsandoval.github.io/albertodsandoval/)
+You can access the link to my blog [here](https://albertodsandoval.github.io/about/)
 
 Thank you for stopping by! If you have any questions
 or concerns, feel free to email me at alberto.domingo.sandoval@gmail.com
