@@ -3,6 +3,16 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+This repository serves as my blog for my Computer Science
+(and maybe unrelated!) endeavours. The goal of this blog
+is to deepen my understanding of concepts learned as
+I progress through my studies as an Undergraduate in
+Computer Science. As Einstein said,
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+> "_If you can't explain it **simply**, you don't
+> understand it well enough._"
+
+You can access the link to my blog [here](https://albertodsandoval.github.io/albertodsandoval/)
+
+Thank you for stopping by! If you have any questions
+or concerns, feel free to email me at alberto.domingo.sandoval@gmail.com
