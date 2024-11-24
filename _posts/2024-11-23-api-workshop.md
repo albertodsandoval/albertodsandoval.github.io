@@ -119,6 +119,9 @@ Click for cat!
   }
 </script>
 ```
+
+And here is a fully function API call injecting into this very blog post
+
 <button onclick="fetchCat();">
     Click for cat!
 </button>
