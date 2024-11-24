@@ -142,10 +142,11 @@ And here is a fully functioning API call injected right into this very blog post
   }
 </script>
 
-Essentially, what is happening here is the link <https://api.thecatapi.com/v1/images/search>
-an API endpoint, and it returns an Object that contains an image of a cat. On _The Cat APIs_
-website, they provide an example of one of these Objects, so from here it is easy to 
-extract the url. This is what the Object looks like:
+The link <https://api.thecatapi.com/v1/images/search> is an API endpoint, 
+and it returns an Object that contains the URL of an image of a cute cat. On _The Cat APIs_
+website, they provide an example of what one of these objects might look like
+, so from here it is easy to figure out how to extract the URL. 
+This is the Object example provided by _The Cat API_:
 ```json
 [{
     "id":"ebv",
@@ -156,7 +157,7 @@ extract the url. This is what the Object looks like:
 }]
 ```
 We know that there is a field in this Object called "url" that contains the url of a cat image.
-So we can create some code that does:
+So we can create some code that:
 1. Creates a button element to click
     * this button will call _fetchCat_ when pressed
 2. Creates a div element to hold the image when we get it
