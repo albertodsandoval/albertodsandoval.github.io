@@ -1,8 +1,3 @@
-header:
-  video:
-    id: -PVofD2A9t8
-    provider: youtube
-
 ---
 title: "Maximum Zig Zags In Number Array (Java)"
 date: 2025-2-13
@@ -14,35 +9,25 @@ tags:
   - Proofs
 ---
 
-> In this blog post, I will quickly explain some
-> of the concepts discussed at **CSUN's** _Girl's Who Code_
-> hosted API workshop featuring **Luis J Guzman**,
-> a web developer at **CSUN**.
+This blog post will explain my logic behind my solution
+for the Max Zig-Zag problem in an array of integers. The
+problem was assigned to us by Professor John Noga in the 
+COMP 482 course offered at CSUN.
 
-## The history of APIs
+## The Problem (Max Zig-Zags)
 
-To start us off, Guzman briefly went over the history
-of, well the **_internet_**. Trying to build our intuition
-on the **idea** of APIs. To sum up everything
-he explained:
-> The entire internet is built on one idea,
-> file sharing. Companies have grown to make 
-> businesses out of this simple idea but 
->  the internet simply acts as a way to access,
-> exchange, and share files with others globally.
+The **computational problem** at hand is to determine the maximum
+amount of decreases and increases in a set of integers. These increases
+and decreases are described by the value of the integers, so for example 1 2 would be an increase while 2 1 would be a decrease.
 
-This idea did intrigue me quite a bit since it gave me 
-a new perspective on something I am already familiar with.
-Websites don't literally give you anything, at the end
-of the day the internet and all of its contents are 
-merely 1s and 0s. But given a file with exclusivity
-or one that requires a trade-off, one may receive 
-benefits beyond the digital world. This is the internal
-philosophy behind things like online shopping. But
-in what way does this relate to APIs? Well, this whole 
-spiel about the philosophy of the internet does relate 
-to APIs in one simple way: APIs simply allow for websites
-to access files.
+The **input** for the problem states the size of the integer array
+followed by the values of the array. An example may look like:
+```
+5
+1 2 3 4 5
+```
+
+
 
 ## So... what is an API?
 
