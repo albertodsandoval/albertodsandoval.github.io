@@ -12,162 +12,100 @@ tags:
 This blog post will explain my logic behind my solution
 for the Max Zig-Zag problem in an array of integers. The
 problem was assigned to us by Professor John Noga in the 
-COMP 482 course offered at CSUN.
+COMP 482 Algorithms course offered at CSUN.
 
 ## The Problem (Max Zig-Zags)
 
 The **computational problem** at hand is to determine the maximum
 amount of decreases and increases in a set of integers. These increases
-and decreases are described by the value of the integers, so for example 1 2 would be an increase while 2 1 would be a decrease.
+and decreases are described by the value of the integers, so for example 1 2 
+would be an increase while 2 1 would be a decrease. And a zig-zag is described 
+as a increase followed by a decrease or vice versa. For example:
+```java
+1 2 1 2 1
+```
+would have 4 zig-zags since the value of the integer alternates from increasing
+to decreasing 4 times. 
+
+One thing to watch out for are _double decreases_ or _double 
+increases_. These are described by either 2 consecutive increases or 2
+consecutive decreases in integer value. An example of a double increase
+would look something like this:
+```java
+1 2 3 1
+```
+we can see there is only 2 zig-zags in this example. But, that is not to
+say that 2 is the maximum number of zig-zags in this set of integers. We
+_could_ organize the numbers in this sort of fashion:
+```java
+1 2 1 3
+```
+and here it is clear that there are 3 zig-zags compared to the previous 
+example with only 2.
 
 The **input** for the problem states the size of the integer array
-followed by the values of the array. An example may look like:
-```
+followed by the values of the array. An example of a **problem instance** 
+may look like:
+```java
 5
 1 2 3 4 5
 ```
 
-
-
-## So... what is an API?
-
-The acronym API stands for Application Programming Interface.
-What it does is allow programs that don't have data or **_files_**
-built in to them to access files stored somewhere else on the internet,
-usually in a database. For example, a user accessing a website like YouTube
-doesn't need to have every single video ever uploaded to YouTube
-installed on their phone or computer. The YouTube application uses
-an API to fetch the information on a video, which exists elsewhere. 
-If this location, the one that actually contains the video, is accessible
-to the public, than anyone can make a website similar to YouTube that 
-streams the same videos that YouTube does.  
-
-To explain it using an analogy, 
-imagine a vinyl record store owner that has a huge inventory of records.
-Struggling to get people to purchase from his store, he instead offers a 
-new service. For a price, individuals can call the record store and listen
-to their favorite album over the phone. If another individual had access
-to the same library of records, they too can offer the service of playing
-albums for customers over the phone. In this analogy, the service of 
-playing the record is the API and the phone line would be the internet.  
-
-You can see how this analogy also ties into the idea that the entire 
-internet is just file sharing, and that APIs are what grant applications
-the ability to share files to an individual who doesn't have them. The API
-acts as an intermediary between the individual or program that doesn't 
-have the files or data, and the one the does.
-
-## Applications of APIs
-
-Guzman did show us a few examples of what an API could look like 
-in an application: a random cat image generator, a random inspiring
-quote generator, as well as a weather API that displays the weather for our location.
-This, of course, is just a few examples that show situations APIs can be used in.
-Generally, APIs are used in almost every website or application. Nearly every
-instance where you press a button or trigger an event and something loads 
-up without transferring you to another URL is likely the work of an API.  
-
-In all of these situations, the website (or application) running the 
-code understands the instructions the programmer is giving it. This is
-the massive benefit of JavaScript, it allows code to be run on the clients
-side. And for those tuning in that have zero experience with coding, most
-programs require that you have a certain language and/or toolset installed on 
-your computer to run. There are many _dependencies_ that code usually relies
-on, but browsers impressively understand JavaScript and can run 
-it out the box. This allows programmers the ability to leave a lot of the
-code execution to the user trying to access it, revolutionary.
-
-## But what does an API look like in code?
-
-Well... an API can be coded up in nearly any language, so it's hard to 
-show syntactically what it would look like. But this, for example, is
-a chunk of code calling [The Cat API](https://thecatapi.com/).
-
-
-```js
-<button onclick="fetchCat();">
-Click for cat!
-</button>
-<div id="cat-container"></div>
-
-<script>
-  async function fetchCat() {
-    const response = await fetch('https://api.thecatapi.com/v1/images/search');
-    const data = await response.json();
-    const catImage = data[0].url;
-
-
-    // Create an image element and add it to the container
-    const imgElement = document.createElement('img');
-    imgElement.src = catImage;
-    imgElement.alt = "A random cat";
-    imgElement.style.maxWidth = "100%"; // Ensure the image fits nicely
-
-    const container = document.getElementById('cat-container');
-    container.innerHTML = "";
-    container.appendChild(imgElement);
-  }
-</script>
+You may be quick to think the **solution** to this problem may look
+something like:
+```java
+5 2 4 1 3
+```
+since this maximizes the amount of zig-zags. But the goal is not to
+find a specific pattern containing the maximum amount of zig-zags, but
+instead you just simply need to find the maximum amount of zig-zags. So
+the actual solution is simply:
+```java
+4
 ```
 
-And here is a fully functioning API call injected right into this very blog post
+## Initial (Naïve) Approach
 
-<button onclick="fetchCat();">
-    Click for cat!
-</button>
-<div id="cat-container"></div>
-<script>
-  async function fetchCat() {
-    const response = await fetch('https://api.thecatapi.com/v1/images/search');
-    const data = await response.json();
-    const catImage = data[0].url;
-    // Create an image element and add it to the container
-    const imgElement = document.createElement('img');
-    imgElement.src = catImage;
-    imgElement.alt = "A random cat";
-    imgElement.style.maxWidth = "100%"; // Ensure the image fits nicely
-    const container = document.getElementById('cat-container');
-    container.innerHTML = "";
-    container.appendChild(imgElement);
-  }
-</script>
+The quickest method I was able to come up with to solve this problem
+is probably the most obvious and the majority of people first thought:
+brute force.
 
-The link <https://api.thecatapi.com/v1/images/search> is an API endpoint, 
-and it returns an Object that contains the URL of an image of a cute cat. On _The Cat APIs_
-website, they provide an example of what one of these objects might look like
-, so from here it is easy to figure out how to extract the URL. 
-This is the Object example provided by _The Cat API_:
-```json
-[{
-    "id":"ebv",
-    "url":"https://cdn2.thecatapi.com/images/ebv.jpg",
-    "width":176,"height":540,
-    "breeds":[],
-    "favourite":{}
-}]
-```
-We know that there is a field in this Object called "url" that contains the url of a cat image.
-So we can create some code that:
-1. Creates a button element to click
-    * this button will call _fetchCat_ when pressed
-2. Creates a div element to hold the image when we get it
-3. Defines the function _fetchCat_ which is called by the button
-4. _fetchCat_ then reaches out to the API and saves the object in _response_
-    * _response_ is then converted to JSON and saved in _data_
-      * JSON is JavaScript Object Notation, and it is essentially a format that JavaScript recognizes
-5. We create an image that displays the image located at the URL in the Object retrieved from the API
-6. We insert that image into the div we created earlier
+The idea is to determine all possible ways to organize the numbers.
+As you are determining all these cases, you also count the amount of zig-zags
+and keep track of the largest number. After iterating through all the possibilities
+you will then know then know what the maximum amount of zig-zags is because you
+officially tested all existing possibilities!
 
-## Conclusion
+Sounds great and simple, but if you have any background or experience in
+statistics you know this is a nPn permuation. Where in an input
+of size n, we have n options to choose the first number, n-1 options for the 
+second, n-2 options for the third, and so on. This ultimately boils down
+to n! (factorial for those unfamiliar) different ways to organize n numbers
+(when order matters, which it does).
 
-And just like that, an API call! Many useful APIs exist out there that you can use
-in your applications. And the neat thing about programming is, if what you are looking
-for doesn't exist, you can make it yourself! Now that is a challenge a little more intense
-than simply calling an existing API, but stick with me through this educational journey, stay
-consistent, love the process, and one day things like this will be a breeze. Cheers to my 
-first blog post, I finally did it!
+Not only would we have to create n! different test cases, but we would also
+have to count the amount of zig-zags in each case. Counting zig-zags requires
+we loop through the entire array of size n at least one time, so for each of 
+the n! cases we would have at n operations! As an example, if we had an input
+of size 5, we would have 5! different cases. Thats 120 different ways we can 
+organize the 5 numbers! And for each of those 120, we would have at least 5 
+_additional_ operations, boosting the total amount of operation to at least
+600, and that is being generous. Increasing the input size even just a little,
+would increase the total operations number **drastically**. For an input of size
+7, the operations would add up to at least 35280.
 
-Anyway, feel free to leave any corrections or suggestions on topics you may want me to cover
-in my email inbox, and I will be sure to get to them as soon as possible. Thank you so much for
-reading, I truly hope that this was informative or at least interesting. Stay tuned for more coming
-soon!
+Professor Noga specified that the cases he would be testing us on would go up
+to size 100. The amount of operations for a size 100 input would be at least
+$9.3 x 10^156$. A truly ridiculous number. This would not do, so I asked myself:
+
+## How Would One Approach This Problem In Real Life?
+
+So far in the lecture for this course (Algorithm Design and Analysis) we have
+gone over one computational problem, Stable Matching. The way Professor Noga
+made it feel intuitive to understand the solution to this issue was by asking
+us how we would deal with the situation in real life. From there we were able to
+conclude the [Propose - Dispose](https://en.wikipedia.org/wiki/Gale%E2%80%93Shapley_algorithm)
+algorithm, for those unfamiliar it is interesting and worth reading about if 
+you are interest in these sort of things.
+
+
