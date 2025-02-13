@@ -1,12 +1,17 @@
+header:
+  video:
+    id: -PVofD2A9t8
+    provider: youtube
+
 ---
-title: "What is an API? How can I use one?"
-date: 2024-11-23
+title: "Maximum Zig Zags In Number Array (Java)"
+date: 2025-2-13
 categories:
   - Blog
 tags: 
   - Lesson
-  - APIs
-  - Workshop
+  - Algorithm
+  - Proofs
 ---
 
 > In this blog post, I will quickly explain some
