@@ -17,10 +17,10 @@ COMP 482 Algorithms course offered at CSUN.
 ## The Problem (Max Zig-Zags)
 
 The **computational problem** at hand is to determine the maximum
-amount of decreases and increases in a set of integers. These increases
-and decreases are described by the value of the integers, so for example 1 2 
-would be an increase while 2 1 would be a decrease. And a zig-zag is described 
-as a increase followed by a decrease or vice versa. For example:
+amount of _zig-zags_ in a set of integers. A zig-zag is described 
+as a increase followed by a decrease or vice versa. These increases
+and decreases are based on the value of the integers, so for example 1 2 
+would be an increase while 2 1 would be a decrease. As an example:
 ```java
 1 2 1 2 1
 ```
@@ -96,7 +96,7 @@ would increase the total operations number **drastically**. For an input of size
 
 Professor Noga specified that the cases he would be testing us on would go up
 to size 100. The amount of operations for a size 100 input would be at least
-$9.3 \times 10^156$. A truly ridiculous number. This would not do, so I asked myself:
+9.3 x 10<sup>156</sup>. A truly ridiculous number. This would not do, so I asked myself:
 
 ## How Would One Approach This Problem In Real Life?
 
