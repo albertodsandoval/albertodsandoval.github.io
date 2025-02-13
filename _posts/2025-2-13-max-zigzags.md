@@ -96,7 +96,7 @@ would increase the total operations number **drastically**. For an input of size
 
 Professor Noga specified that the cases he would be testing us on would go up
 to size 100. The amount of operations for a size 100 input would be at least
-$9.3 x 10^156$. A truly ridiculous number. This would not do, so I asked myself:
+$9.3 \times 10^156$. A truly ridiculous number. This would not do, so I asked myself:
 
 ## How Would One Approach This Problem In Real Life?
 
