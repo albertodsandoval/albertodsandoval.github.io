@@ -110,6 +110,6 @@ you are interested in these sort of things.
 
 So I looked at a visual example provided by Professor Noga and thought about
 the steps I might take to get to the solution. 
-![Image](/images/Max-Zig-Zags.png)
+![Image](/assests/images/Max-Zig-Zags.png)
 
 
