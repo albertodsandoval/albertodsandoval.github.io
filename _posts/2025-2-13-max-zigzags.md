@@ -102,10 +102,14 @@ to size 100. The amount of operations for a size 100 input would be at least
 
 So far in the lecture for this course (Algorithm Design and Analysis) we have
 gone over one computational problem, Stable Matching. The way Professor Noga
-made it feel intuitive to understand the solution to this issue was by asking
-us how we would deal with the situation in real life. From there we were able to
-conclude the [Propose - Dispose](https://en.wikipedia.org/wiki/Gale%E2%80%93Shapley_algorithm)
-algorithm, for those unfamiliar it is interesting and worth reading about if 
-you are interest in these sort of things.
+made the solution intuitive to understand was by asking us how we would deal
+with the situation in real life. From there we were able to conclude the 
+[Propose - Dispose](https://en.wikipedia.org/wiki/Gale%E2%80%93Shapley_algorithm)
+algorithm. For those unfamiliar, it is interesting and worth reading about if 
+you are interested in these sort of things.
+
+So I looked at a visual example provided by Professor Noga and thought about
+the steps I might take to get to the solution. 
+![Image](/images/Max-Zig-Zags.png)
 
 
