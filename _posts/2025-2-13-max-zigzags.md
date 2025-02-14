@@ -112,4 +112,33 @@ So I looked at a visual example provided by Professor Noga and thought about
 the steps I might take to get to the solution. 
 ![Image](/assets/images/Max-Zig-Zags.png)
 
+My first thought was to sort the books based on their height and then split
+the stack of books in half. Then do some sort of zip operation where we alternate
+books from the first half and the second half. My idea was, since we sorted the books
+by height, we know that the books in the second half will all be shorter than or equal
+to the books in the first half. This is crucial to the functionality of this algorithm.
+As an example, we can take the input:
+```java
+5
+1 2 3 4 5
+```
+Then we can sort it and split it.
+```java
+5 4 3   2 1
+```
+Here is where I realized there will be an issue with odd numbers, so for now I just give
+the half larger in value the extra number. Which then zips into:
+```java
+5 2 4 1 3
+```
+
+This gave us a pattern with 4 zig-zags, but at this point I wasn't sure if this was correct
+answer. The solution definitely **cannot** be lower than 4, because we know a case with 4 
+**exists**. But can it be above 4?
+
+The answer is NO! If you have 5 numbers, it is impossible to have more than 4 zig-zags. 
+This is because one zig-zag requires the _connection_ of 2 numbers, and in 5 numbers
+we only have 4 _connections_. This is big because we know that the max amount of zig-zags 
+in a given set of numbers of size n is n-1.
+
 
