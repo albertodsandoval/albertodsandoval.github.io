@@ -9,10 +9,12 @@ tags:
   - Proofs
 ---
 
-This blog post will explain my logic behind my solution
-for the Max Zig-Zag problem in an array of integers. The
-problem was assigned to us by Professor John Noga in the 
-COMP 482 Algorithms course offered at CSUN.
+This blog post will explre the logic behind my solution
+for the Max Zig-Zag problem in an array of integers I will
+also dive into the thought processes and challenges I faced
+when trying to identify an algorithm to solve it. The
+problem was assigned to us by Professor John Noga's 
+COMP 482 (Algorithm Design and Analysis) course offered at CSUN.
 
 ## The Problem (Max Zig-Zags)
 
@@ -109,15 +111,18 @@ algorithm. For those unfamiliar, it is interesting and worth reading about if
 you are interested in these sort of things.
 
 So I looked at a visual example provided by Professor Noga and thought about
-the steps I might take to get to the solution. 
+the steps I might take ion real life to get the desired outcome. 
 ![Image](/assets/images/Max-Zig-Zags.png)
 
-My first thought was to sort the books based on their height and then split
-the stack of books in half. Then do some sort of zip operation where we alternate
-books from the first half and the second half. My idea was, since we sorted the books
-by height, we know that the books in the second half will all be shorter than or equal
-to the books in the first half. This is crucial to the functionality of this algorithm.
-As an example, we can take the input:
+My first thought was to sort the books based on their height (Tallest to shortest)
+and then split the stack of books in half. Then do some sort of zip operation where
+we alternate books from the first half and the second half. My idea was, since we
+sorted the books by height, we know that the books in the second half will all be
+shorter than or equal to the books in the first half. This is crucial to the
+functionality of this algorithm since (assuming the set has all different numbers)
+we know that any number in the second half will be smaller than any number in the
+first half. So alternating between the second half (smaller half) and the first half
+will guarantee zig-zags. As an example, we can take the input:
 ```java
 5
 1 2 3 4 5
@@ -133,12 +138,51 @@ the half larger in value the extra number. Which then zips into:
 ```
 
 This gave us a pattern with 4 zig-zags, but at this point I wasn't sure if this was correct
-answer. The solution definitely **cannot** be lower than 4, because we know a case with 4 
+solution. The solution definitely **cannot** be lower than 4, because we know a case with 4 
 **exists**. But can it be above 4?
 
-The answer is NO! If you have 5 numbers, it is impossible to have more than 4 zig-zags. 
-This is because one zig-zag requires the _connection_ of 2 numbers, and in 5 numbers
-we only have 4 _connections_. This is big because we know that the max amount of zig-zags 
-in a given set of numbers of size n is n-1.
+The answer is actually NO! If you have 5 numbers, it is impossible to have more than 4 zig-zags. 
+This is because one zig-zag requires the _connection_ of 2 numbers, and in a set of 5
+numbers we only have 4 _connections_. This is an important discovery for me because I
+now know that the max amount of zig-zags in a given set of numbers of size n is n-1.
 
+## Testing! Testing! Testing!
 
+After testing a few more simple cases and seeing success in the algorithm, I started to
+search for edge cases and starting categorizing the type of tests I was feeding the algorithm.
+By the logic of the naive algorithm, the **ideal** case is where all the numbers are different.
+But what if all the numbers were the same? Well if all books were the same height, there's no 
+zig-zags! Simple. Now, what if a large majority of the numbers are the same? Lets test it. Take:
+```java
+10
+1 1 1 1 1 1 1 2 3 4
+```
+Here there are 7 one's and 3 unique integers. Lets preform our algorithm.
+```java
+4 3 2 1 1   1 1 1 1 1
+```
+```java
+4 1 3 1 2 1 1 1 1 1
+```
+You can see here that we only have 5 zig-zags, on an input of size 10 the maximum possible is 9.
+So either the algorithm is malfunctioning or this case truly only has 5 zig-zags. Notice the 1's,
+is there any way that we can organize the 1's such that they do NOT touch each other? If two numbers
+that are the same are touching, that wouldn't be an increase OR a decrease, lets call it a straight.
+Straights instantly subtract 1 from our zig-zags, and in our case we have 4. This is why we only have
+5 zig-zags since we subtract the straights from the max zig-zags. Here the question was, _is there 
+a way to organize these 1's so that they do not touch?_. Lets try:
+ ```java
+1 2 1 3 1 4 1 1 1 1
+```
+Here we reduced the consecutive 1's from 5 to 4, which gave us one more zig-zag. The algorithm failed, but
+could be fixed with some tweaks. Lets first figure out how many times a number can repeat before the number
+**must** come into contact with itself, causing a straight. Let's use X's and O's to try to figure this out.
+In the case of an odd number input size:
+```java
+X O X O X O X O X
+```
+The way to maximize the spread of X's without letting them touch is by alternating them, and in an odd number 
+we can have one more X than O's. This is n/2+1, where n is the input size.
+Instead of alternating starting from the larger half constantly, we can
+try alternating from the larger half first **and also** from the smaller half first. This is because one of
+these halfs must contain the number that repeats a **lot**, and we want to START with that number to 
