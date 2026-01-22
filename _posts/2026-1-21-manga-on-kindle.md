@@ -31,8 +31,8 @@ After searching for your manga in HakuNeko, make sure to filter the language to 
 ![Image](/assets/images/Pasted image 20260121222301.png)
 
 From here, you can download them all using the download button\
-![Image](/assets/images/Pasted image 20260121222333.png)
-\or manually download chapters by clicking on the cloud icon to the left of the chapter name.
+![Image](/assets/images/Pasted image 20260121222333.png)\
+or manually download chapters by clicking on the cloud icon to the left of the chapter name.
 
 They should all be saved in the location you specified in the setting. All chapters belonging to the same manga series will be stored in the same folder, which will be named whatever your manga series is named. 
 # Step 4: Download Kindle Comic Converter
