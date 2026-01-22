@@ -17,7 +17,7 @@ Also make sure your settings look like mine:\
 ![Image](/assets/images/Pasted image 20260121210457.png)
 
 # Step 3: Download Manga from HakuNeko
-Follow the instructions from the right hand side of the HakuNeko desktop application to install manga.\
+Follow the instructions from the right hand side of the HakuNeko desktop application to install manga. The instructions are as follows:\
 ![Image](/assets/images/Pasted image 20260121221036.png)
 
 It is better to first search the web for sources that contain the manga you want, so you don't waste time waiting for HakuNeko to load. HakuNeko can take up to 10 minutes searching through the large libraries that the sources may offer, so it is definitely recommended to search online beforehand.
@@ -51,14 +51,14 @@ If you are using a Kindle, which this tutorial is assuming you are, you have to 
 
 Note: You don't actually have to *use* the Kindle-Previewer app, you just need to have it downloaded.
 
-Once in KCC, make sure to select your eReader model. You can find the drop download *below* the **Add input file(s)** button. 
+Once in KCC, make sure to select your eReader model. You can find the drop-down *below* the **Add input file(s)** button. 
 
 If you want the full manga *Right-to-left* experience, make sure to check that box. I would also select Cropping mode in order to remove margins. Especially if your reader has a smaller screen.
 
 Now, select **Add input folder(s)** and find the folder for the series you want to convert. Then simply press **Convert**. After this, a file will be saved to the same folder that your manga files from HakuNeko were in.
 
 # Step 6: Download Calibre (optional)
-If you want to properly label your manga, and make it appear nice in your Kindle. If not, KCC developers suggest you can just plug your Kindle into your computer and drag the file generate by KCC into the Kindle documents folder. And you are now finished! Your manga should be ready to read on your Kindle.
+If you want to properly label your manga, and make it appear nice in your Kindle, I would suggest installing Calibre. If not, KCC developers suggest you can just plug your Kindle into your computer and drag the file generate by KCC into the Kindle documents folder. And you are now finished! Your manga should be ready to read on your Kindle.
 
 If you want to go the Calibre route, download Calibre [here](https://calibre-ebook.com/download).
 
