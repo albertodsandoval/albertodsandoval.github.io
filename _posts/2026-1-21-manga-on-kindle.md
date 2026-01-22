@@ -13,11 +13,11 @@ Download [HakuNeko](https://github.com/manga-download/hakuneko/releases/tag/v6.1
 # Step 2: Adjust Settings in HakuNeko
 Open HakuNeko and click the hamburger (3 horizontal lines) on the top left. From here you will be able to access settings. Make sure to change your Manga directory to where you want your manga to save on your computer. 
 
-Also make sure your settings look like mine:
+Also make sure your settings look like mine:\
 ![Image](/assets/images/Pasted image 20260121210457.png)
 
 # Step 3: Download Manga from HakuNeko
-Follow the instructions from the right hand side of the HakuNeko desktop application to install manga.
+Follow the instructions from the right hand side of the HakuNeko desktop application to install manga.\
 ![Image](/assets/images/Pasted image 20260121221036.png)
 
 It is better to first search the web for sources that contain the manga you want, so you don't waste time waiting for HakuNeko to load. HakuNeko can take up to 10 minutes searching through the large libraries that the sources may offer, so it is definitely recommended to search online beforehand.
@@ -27,10 +27,10 @@ As for connectors (websites), I recommend these three:
 * MangaLife
 * MangaFox
 
-After searching for your manga in HakuNeko, make sure to filter the language to be only English, and then sort the manga by volume using this button:
+After searching for your manga in HakuNeko, make sure to filter the language to be only English, and then sort the manga by volume using this button:\
 ![Image](/assets/images/Pasted image 20260121222301.png)
 
-From here, you can download them all using the download button
+From here, you can download them all using the download button\
 ![Image](/assets/images/Pasted image 20260121222333.png)
 or manually download chapters by clicking on the cloud icon to the left of the chapter name.
 
